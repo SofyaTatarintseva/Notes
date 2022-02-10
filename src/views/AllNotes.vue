@@ -36,7 +36,13 @@ export default {
       this.notes = test.data;
     },
     addNote() {
-      const id = this.notes[this.notes.length - 1].id + 1;
+      let id;
+      if (this.notes.length === 0) {
+        id = 0;
+      } else {
+        id = this.notes[this.notes.length - 1].id + 1;
+      }
+      
       this.$router.push(`/note${id}`);
     }
   }

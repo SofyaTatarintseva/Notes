@@ -37,7 +37,7 @@ export default {
         console.error(e);
       }
       this.$props.modal.isOpenModel = false;
-      location.reload();
+      this.$router.push(`/`);
     }
   }
 };

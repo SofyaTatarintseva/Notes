@@ -93,6 +93,7 @@ export default {
             this.note
           );
         }
+        this.$router.push(`/`);
       }
     },
     async getNotes() {
